@@ -15,11 +15,19 @@ Easily train your model, evaluate performance, and predict insurance charges wit
 
 ---
 
-##  API Endpoints
+## Endpoints
 
-### 1️ `/train` (POST)
-- **Description:** Train the Linear Regression model  
-- **CSV Columns:** `age, sex, bmi, children, smoker, region, charges`  
+/train (POST)
+Description: Upload a CSV file to train the Linear Regression model.
+Required CSV Columns: age, sex, bmi, children, smoker, region, charges
 
-**Postman Request:**
+How to Use in Postman:
+
+Set method to POST
+
+URL: http://localhost:5000/train
+
+Go to Body → form-data
+
+Add a key named file → Type: File → Upload your CSV file
 
