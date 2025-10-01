@@ -48,15 +48,14 @@ Returns predicted charge.
 - URL: `http://localhost:5000/predict`  
 - In the Body tab, select **raw** and choose **JSON** format  
 
-**Example JSON body:**  
+**Example JSON body & Expected Output body:**  
 ```json
 {
   "features": [34, 1, 25, 2, 0]
 }
 
 
-Expected Output body:
-```json
+
 {
   "predicted_charge": 5589.815344897121
 }
