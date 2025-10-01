@@ -2,7 +2,7 @@
 
 Flask-based ML API to train, test, and predict medical insurance charges.
 
-## Endpoints
+s## Endpoints
 
 ### 1. /train (POST)
 - Input: CSV file (form-data, key=`file`)
@@ -40,3 +40,5 @@ Flask-based ML API to train, test, and predict medical insurance charges.
 ## How to Run
 
 1. Install dependencies:
+# ML_HealthApp
+Flask ML API for Health Insurance Charges Prediction
