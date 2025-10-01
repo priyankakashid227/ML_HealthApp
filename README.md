@@ -48,10 +48,7 @@ Returns predicted charge.
 - URL: `http://localhost:5000/predict`  
 - In the Body tab, select **raw** and choose **JSON** format
 
-- ## Setup
-
-
-
+  
 
 **Example JSON body & Expected Output body:**  
 ```json
