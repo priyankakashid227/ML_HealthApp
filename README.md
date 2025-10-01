@@ -59,14 +59,3 @@ Returns predicted charge.
 {
   "predicted_charge": 5589.815344897121
 }
-
-
-
-
-
-
-
-
-
-
-
