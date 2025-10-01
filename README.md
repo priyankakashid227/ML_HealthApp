@@ -56,8 +56,11 @@ Returns predicted charge.
   "features": [34, 1, 25, 2, 0]
 }
 
-
-
+**Expected Output in JSON:**  
+```json
+{
+  "predicted_charge": 5589.815344897121
+}
 {
   "predicted_charge": 5589.815344897121
 }
