@@ -63,8 +63,7 @@ Returns predicted charge.
 
 
 
-
-Setup:
+**Setup:**
 ```
 Install dependencies:
 
