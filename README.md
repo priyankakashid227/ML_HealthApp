@@ -56,7 +56,7 @@ Returns predicted charge.
 
 
 
-**Expected Output in JSON:**
+Expected Output in JSON:
 ```json
 {
   "predicted_charge": 5589.815344897121
