@@ -63,8 +63,4 @@ Returns predicted charge.
 
 
 
-**Setup:**
-```
-Install dependencies:
 
-pip install -r requirements.txt
