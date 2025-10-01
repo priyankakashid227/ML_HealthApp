@@ -1,44 +1,46 @@
-# Health Insurance Charges Prediction API
+Health Insurance Charges Prediction API
+This project is a Flask-based REST API for training, testing, and predicting health insurance charges using a linear regression model.
 
-Flask-based ML API to train, test, and predict medical insurance charges.
-
-s## Endpoints
-
-### 1. /train (POST)
-- Input: CSV file (form-data, key=`file`)
-- Output: 
+Features
+Train: Upload a CSV file to train the model.
+Test: Upload a CSV file to evaluate the model (R², MSE, MAE).
+Predict: Send a JSON payload to get a charge prediction for a single input.
+Endpoints
+/train (POST)
+Upload a CSV file with columns: age, sex, bmi, children, smoker, region, charges.
+Trains the linear regression model.
+How to use in Postman:
+Set method to POST and URL to http://localhost:5000/train
+In the Body tab, select form-data
+Add a key named file of type File and upload your CSV file
+/test (POST)
+Upload a CSV file with the same columns as above.
+Returns model metrics: R² score, mean squared error, mean absolute error.
+How to use in Postman:
+Set method to POST and URL to http://localhost:5000/test
+In the Body tab, select form-data
+Add a key named file of type File and upload your CSV file
+/predict (POST)
+Send a JSON payload with features: [age, sex_enc, bmi, children, smoker_enc]
+sex_enc: 0 for female, 1 for male
+smoker_enc: 0 for no, 1 for yes
+Returns predicted charge.
+How to use in Postman:
+Set method to POST and URL to http://localhost:5000/predict
+In the Body tab, select raw and choose JSON format
+Example JSON body:
 {
-  "status": "ok",
-  "message": "Model trained successfully"
+  "features": [34, 1, 25, 2, 0]
 }
-
-### 2. /test (POST)
-- Input: CSV file (form-data, key=`file`)
-- Output example:
+Expected Output in JSON:
 {
-  "mse": 123456.78,
-  "mae": 987.65,
-  "r2": 0.85
+"predicted_charge": 5589.815344897121
 }
-
-### 3. /predict (POST)
-- Input: JSON (one row from CSV, without `charges`)
-- Example:
-{
-  "age": 30,
-  "sex": "female",
-  "bmi": 28.5,
-  "children": 1,
-  "smoker": "no",
-  "region": "southeast"
-}
-- Output example:
-{
-  "predicted_charges": 12045.67
-}
-
-## How to Run
-
-1. Install dependencies:
-# ML_HealthApp
-Flask ML API for Health Insurance Charges Prediction
+Setup
+Install dependencies:
+pip install -r requirements.txt
+Run the API:
+python ml_api.py
+Notes
+The model must be trained before using /test or /predict.
+Example data file: Health_insurance.csv (included).
