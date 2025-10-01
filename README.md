@@ -5,6 +5,9 @@ Features
 Train: Upload a CSV file to train the model.
 Test: Upload a CSV file to evaluate the model (R², MSE, MAE).
 Predict: Send a JSON payload to get a charge prediction for a single input.
+
+
+
 Endpoints
 /train (POST)
 Upload a CSV file with columns: age, sex, bmi, children, smoker, region, charges.
@@ -25,9 +28,15 @@ Send a JSON payload with features: [age, sex_enc, bmi, children, smoker_enc]
 sex_enc: 0 for female, 1 for male
 smoker_enc: 0 for no, 1 for yes
 Returns predicted charge.
+
+
+
 How to use in Postman:
 Set method to POST and URL to http://localhost:5000/predict
 In the Body tab, select raw and choose JSON format
+
+
+
 Example JSON body:
 {
   "features": [34, 1, 25, 2, 0]
@@ -36,11 +45,18 @@ Expected Output in JSON:
 {
 "predicted_charge": 5589.815344897121
 }
+
+
+
 Setup
 Install dependencies:
 pip install -r requirements.txt
 Run the API:
 python ml_api.py
+
+
+
+
 Notes
 The model must be trained before using /test or /predict.
 Example data file: Health_insurance.csv (included).
