@@ -48,12 +48,6 @@ Returns predicted charge.
 - URL: `http://localhost:5000/predict`  
 - In the Body tab, select **raw** and choose **JSON** format
 
-## Setup
-
-**Install dependencies:**
-```bash
-pip install -r requirements.txt
-
 
   
 
