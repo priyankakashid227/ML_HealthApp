@@ -23,8 +23,8 @@ Required CSV Columns: age, sex, bmi, children, smoker, region, charges
 
 ## How to Use in Postman:
 
-Set method to POST
-URL: http://localhost:5000/train
-Go to Body → form-data
-Add a key named file → Type: File → Upload your CSV file
+|Set method to POST|
+|URL: http://localhost:5000/train|
+|Go to Body → form-data|
+|Add a key named file → Type: File → Upload your CSV file|
 
